@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.example.pizzaorderapp_20211211.datas.StoreData
 import com.gun0912.tedpermission.PermissionListener
+import com.gun0912.tedpermission.normal.TedPermission
 import kotlinx.android.synthetic.main.activity_view_store_detail.*
 
 class ViewStoreDetailActivity : AppCompatActivity() {
@@ -36,7 +37,11 @@ class ViewStoreDetailActivity : AppCompatActivity() {
                 }
             }
 
-
+            TedPermission
+                .create()
+                .setPermissionListener(pl)
+                .setPermissions(android.Manifest.permission.CALL_PHONE)
+                .check()
         }
     }
 
