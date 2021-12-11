@@ -12,7 +12,7 @@ import com.example.pizzaorderapp_20211211.datas.StoreData
 class StoreAdapter(
     val mContext: Context,
     val resId: Int,
-    val mList: ArrayList<StoreData>
+    var mList: ArrayList<StoreData>
 ): ArrayAdapter<StoreData>(mContext, resId, mList) {
 
     val mInflater = LayoutInflater.from(mContext)
