@@ -12,8 +12,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setupEvents()
         setValues()
+        setupEvents()
+
     }
 
     private fun setupEvents() {
@@ -23,5 +24,7 @@ class MainActivity : AppCompatActivity() {
     private fun setValues() {
         mvpa = MainViewPagerAdapter( supportFragmentManager )
         mainViewPager.adapter = mvpa
+
+        mainTabLayout.setupWithViewPager( mainViewPager )
     }
 }
